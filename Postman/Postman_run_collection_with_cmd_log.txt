@@ -1,0 +1,50 @@
+newman
+
+SwaggerPetstore
+
+□ user
+└ Creates list of users with given input array
+  POST https://petstore.swagger.io/v2/user/createWithList [200 OK, 370B, 645ms]
+  √  Status code name has string
+  √  Response time is less than 10000ms
+  √  Body matches string
+
+└ Get user by user name
+  GET https://petstore.swagger.io/v2/user/Din [200 OK, 490B, 142ms]
+  √  Status code is 200
+  √  Status code name has string
+  √  Body matches string
+
+└ Update user
+  PUT https://petstore.swagger.io/v2/user/Din [200 OK, 387B, 141ms]
+  √  Status code is 200
+  √  Status code name has string
+  √  Response time is less than 1000ms
+  √  Content-Type is present
+
+└ Delete user
+  DELETE https://petstore.swagger.io/v2/user/Din [200 OK, 371B, 140ms]
+  √  Status code is 200
+  √  Status code name has string
+  √  Response time is less than 1000ms
+  √  Content-Type is present
+
+┌─────────────────────────┬─────────────────────┬────────────────────┐
+│                         │            executed │             failed │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              iterations │                   1 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│                requests │                   4 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│            test-scripts │                   4 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│      prerequest-scripts │                   0 │                  0 │
+├─────────────────────────┼─────────────────────┼────────────────────┤
+│              assertions │                  14 │                  0 │
+├─────────────────────────┴─────────────────────┴────────────────────┤
+│ total run duration: 1456ms                                         │
+├────────────────────────────────────────────────────────────────────┤
+│ total data received: 314B (approx)                                 │
+├────────────────────────────────────────────────────────────────────┤
+│ average response time: 267ms [min: 140ms, max: 645ms, s.d.: 218ms] │
+└────────────────────────────────────────────────────────────────────┘
