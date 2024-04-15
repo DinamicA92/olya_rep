@@ -46,3 +46,11 @@ jobs:
       - name: run PetCollerction
         run: newman run Postman/SwaggerPetstore.postman_collection.json -e Postman/SwaggerPetstore.postman_environment.json
       
+  BashFunctions_skript:
+    runs-on: ubuntu-latest
+    needs:
+     - build
+    steps:	
+      - uses: actions/checkout@v3	  
+      - name: run BashFunctions_skript
+        run: sh Bash_script/Create_Copy_Rename_Delete_file.sh
