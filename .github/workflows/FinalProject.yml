@@ -35,12 +35,11 @@ jobs:
           echo test, and deploy your project.
   
   
-  olya_skript:
+  BashFunctions_skript:
     runs-on: ubuntu-latest
     needs:
-     - build
-    steps:
-
-      - uses: actions/checkout@v3
-      - name: run olya skript
-        run: sh olya_echo.sh
+     - build     
+    steps:	
+      - uses: actions/checkout@v3	  
+      - name: run BashFunctions_skript
+        run: sh Create_Copy_Rename_Delete_file.sh
