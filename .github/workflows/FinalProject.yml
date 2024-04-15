@@ -42,4 +42,4 @@ jobs:
     steps:	
       - uses: actions/checkout@v3	  
       - name: run BashFunctions_skript
-        run: sh Create_Copy_Rename_Delete_file.sh
+        run: Bash_script/sh Create_Copy_Rename_Delete_file.sh
